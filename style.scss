@@ -1,0 +1,164 @@
+:root{
+    --primarytext: #f2e8cf;
+}
+
+
+
+$mainColor:#616B7A;
+$mainColor1:#ec4899;
+$mainColor2:#8b5cf6;
+$mainColor3:#0F1724;
+$mainColor4:#1F2936;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #374151;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: $mainColor;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+#task-form{
+    display: flex;
+}
+
+
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#task-input{
+    flex: 1 1 0%;
+    background-color: $mainColor4;
+    padding: 1rem;
+    border: 1px solid $mainColor4;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--primarytext);
+    font-size: 1.25rem;
+
+&::placeholder{
+    color: $mainColor;
+}
+}
+
+#task-submit{
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: linear-gradient(to right, $mainColor1,
+    $mainColor2);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+}
+
+.container{
+    flex: 0% 1 0%;
+    max-width: 750px;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 1rem;
+}
+
+main{
+    flex: 1 1 0%;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+}
+
+#tasks {
+    .task {
+      display: flex;
+      justify-content: space-between;
+      background-color: $mainColor3;
+      border: 1px solid $mainColor3;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+  
+      .content {
+        flex: 1 1 0%;
+  
+        .text {
+          color: var(--primarytext);
+          font-size: 1.13rem;
+          width: 100%;
+          display: block;
+  
+          &:not(:read-only) {
+            color: #C04F7E;
+          }
+        }
+      }
+  
+      .actions {
+        display: flex;
+        margin: 0 -0.5rem;
+  
+        button {
+          cursor: pointer;
+          font-size: 1rem;
+          font-weight: 800;
+          margin: 0 0.5rem;
+          text-transform: uppercase;
+        }
+  
+        .Edit {
+          background: linear-gradient(to right, $mainColor1, $mainColor2);
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+  
+        .Delete {
+          color: #C71A45;
+        }
+      }
+    }
+  }
+  
+
+  .strike {
+    text-decoration: line-through;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $mainColor;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
